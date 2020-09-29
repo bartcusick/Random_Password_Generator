@@ -16,10 +16,12 @@ function writePassword() {
 
 }
 
-// Write the function that is going to generate the password
+// Write a function that is going to generate the password
 function generatePassword() {
-    // var finalPassword = [];
-    // Creates a prompt box which takes in text input for length of password.
+
+    // This Creates a prompt box which takes in text input for length of password. 
+    // Checks to see if you have entered a number between 8 and 128. 
+    // It also checks to see that you entered in a number.
     lengthOfPassword = parseInt(prompt("Your number must be between 8 and 128 charachters", placeholder = "Select your password length.", "10"));
     if (lengthOfPassword < 8) {
         alert("Your password has to be greater than 8 charachters");
@@ -32,52 +34,34 @@ function generatePassword() {
         return;
     }
 
-
+// These are the confirm pop ups that let you choose if you want to use upercase, lowercase,numbers, and special charachters in your password.
     var length = lengthOfPassword;
-    console.log("my length of pasword is now: " + lengthOfPassword);
     // Creates a confirm box which takes in true or false.
-    // var x = parseInt(prompt("Enter a Value", "0"), 10);
     var upperCase = confirm("Would you like to use upercase letters?");
     var lowerCase = confirm("Would you like to use lowercase letters?");
     var numbers = confirm("Would you like to use numbers?");
     var specialCharachters = confirm("Would you like to use special Charachters?");
     ///////////////////////////
-
-    // while (!upperCase && !lowers && !numbers && !specialCharachters) {
-    //     alert("You must select at least one character type!");
-    //     return;
-    // }
-    //////////////////////////
-    // var myArray = "";
-    // function generateNewPassword() {
-    //     var password = "";
-
-    //     var allowed = {};
-    //     if (upperCase) password += upperCharset.charAt(Math.floor(Math.random() * n));
-    //     if (lowerCase) password += lowerCharset.charAt(Math.floor(Math.random() * n));
-    //     if (numbers) password += numberCharset.charAt(Math.floor(Math.random() * n));
-    //     if (specialCharachters) password += specialCharset.charAt(Math.floor(Math.random() * n));
-
-    //     for (var i = password.length; i < length; i++) password += rando(rando(allowed).value);
-
-    //     document.getElementById("password").value = randoSequence(password).join("");
-    //
-
-    retVal = "";
+// This creates a new large array from the arrays that were chosen with the confirm pop up choices.
+    var myNewArray = "";
     for (var i = 0, n = upperCharset.length; i < length; ++i) {
 
-        retVal += upperCharset.charAt(Math.floor(Math.random() * n));
-        retVal += lowerCharset.charAt(Math.floor(Math.random() * n));
-        retVal += numberCharset.charAt(Math.floor(Math.random() * n));
-        retVal += specialCharset.charAt(Math.floor(Math.random() * n));
-
-        console.log("retVal = " + retVal);
+        if (upperCase) myNewArray += upperCharset.charAt(Math.floor(Math.random() * n));
+        if (lowerCase) myNewArray += lowerCharset.charAt(Math.floor(Math.random() * n));
+        if (numbers) myNewArray += numberCharset.charAt(Math.floor(Math.random() * n));
+        if (specialCharachters) myNewArray += specialCharset.charAt(Math.floor(Math.random() * n));
     }
-    //joining the array into a string.
-    // return retVal.join("");
-    return retVal;
-
-}
+    //This for statement pulls out a new array from myNewArray that has the lenght value chosen in the Prompt lengthOfPassword.
+        var newPassword = "";
+        for (var i = 0, n = myNewArray.length; i < length; ++i) {
+            newPassword += myNewArray.charAt(Math.floor(Math.random() * n)); 
+            console.log("what am i doing = " + myNewArray);
+    }
+    // Passing the new final password to the text box (passwordText)
+    password =  newPassword;
+    return password;
+    }
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
