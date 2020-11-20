@@ -15,3 +15,4 @@ https://bartcusick.github.io/homeWork3/
 
 ```
 03-javascript-homework-demo.png
+Website Preview: ![alt text](https://bartcusick.github.io/homeWork3/03-javascript-homework-demo.png)
