@@ -13,7 +13,7 @@ SO THAT I can create a strong password that provides greater security
 ```
 
 ## View THe working App.
-target="_blank">https://bartcusick.github.io/homeWork3/
+https://bartcusick.github.io/homeWork3/
 
 ```
 ![GitHub Logo](/images/logo.png)
