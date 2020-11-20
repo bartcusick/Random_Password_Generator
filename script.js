@@ -6,33 +6,39 @@ var numberCharset = "1234567890"
 var specialCharset = "!@#$%^&*()_+"
 var finalPassword = ""
 var lengthOfPassword = "null";
+var passwordText = document.querySelector("#password");
+var temp = "Your Secure Password";
 
 // Write password to the #password input
 function writePassword() {
+    passwordText.value = temp;
     var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+    //var passwordText = document.querySelector("#password");
     passwordText.value = password;
     console.log("I am writing a password = " + password);
-
 }
 
 // Write a function that is going to generate the password
 function generatePassword() {
-
     // This Creates a prompt box which takes in text input for length of password. 
     // Checks to see if you have entered a number between 8 and 128. 
     // It also checks to see that you entered in a number.
     lengthOfPassword = parseInt(prompt("Your number must be between 8 and 128 charachters", placeholder = "Select your password length.", "10"));
     if (lengthOfPassword < 8) {
-        alert("Your password has to be greater than 8 charachters");
+        //return("Your password has to be greater than 8 charachters");
+        return("");
     }
     else if (lengthOfPassword > 128) {
-        alert("Your password has to be less than 128 charachters");
+        //return("Your password has to be less than 128 charachters");
+        return("");
     }
-    if (isNaN(lengthOfPassword)) {
-        alert("You have to at least enter a number.");
-        return;
+    else if (isNaN(lengthOfPassword)) {
+        //return("You have to at least enter a number.");
+        return("");
     }
+    // else {
+    //     return("");
+    // }
 
 // These are the confirm pop ups that let you choose if you want to use upercase, lowercase,numbers, and special charachters in your password.
     var length = lengthOfPassword;
