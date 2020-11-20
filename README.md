@@ -15,5 +15,5 @@ https://bartcusick.github.io/homeWork3/
 
 ```
 03-javascript-homework-demo.png
-Website Preview: ![alt text](https://bartcusick.github.io/homeWork3/03-javascript-homework-demo.png)
-Website Preview: ![alt text](https://github.com/bartcusick/homeWork3/blob/master/03-javascript-homework-demo.png)
+Website Preview: ![alt text](https://bartcusick.github.io/Random_Password_Generator/03-javascript-homework-demo.png)
+Website Preview: ![alt text](https://github.com/bartcusick/Random_Password_Generator/master/03-javascript-homework-demo.png)
