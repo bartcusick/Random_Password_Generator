@@ -14,7 +14,6 @@ SO THAT I can create a strong password that provides greater security
 https://bartcusick.github.io/homeWork3/
 
 ```
-Website Preview: ![alt text](https://bartcusick.github.io/random_Password_Generator/website.png)
 03-javascript-homework-demo.png
 ![Image of random Password Generator App]
-(https://bartcusick.github.com/random_Password_Generator/website.png)
+(https://bartcusick.github.com/03-javascript-homework-demo.png)
